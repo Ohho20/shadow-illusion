@@ -13,9 +13,6 @@ html(class="no-js", ng-app="main")
       link(href="/assets/css/style.css", rel="stylesheet", type="text/css")
 
   body(ng-controller="MainCtrl")
-    .mx-page-container(ng-cloak)
-      div(ui-view="navbar")
-      div(ui-view="content")
-      div(ui-view="login")
+    #screen
 
     include ../templates/scripts
