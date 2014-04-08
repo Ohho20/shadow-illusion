@@ -5,32 +5,10 @@ case env
     script(src="assets/js/app.js")
   default
 
-    // melon
-    script(src='assets/js/melonJS/build/melonJS-1.0.0.js')
-
-    // jQuery and Related
-    script(src='assets/js/jquery/jquery.js')
-    script(src='assets/js/messenger/build/js/messenger.js')
-
-    // bootstrap
-    script(src='assets/js/bootstrap/dist/js/bootstrap.js')
-
-    // AngularJS libraries
-    script(src='assets/js/angular/angular.js')
-    script(src='assets/js/angular-cookies/angular-cookies.js')
-    script(src='assets/js/angular-resource/angular-resource.js')
-    script(src='assets/js/angular-sanitize/angular-sanitize.js')
-    script(src='assets/js/angular-animate/angular-animate.js')
-
-    //NProgress
-    script(src='assets/js/nprogress/nprogress.js')
-
-    // utilities
-    script(src='assets/js/lodash/dist/lodash.js')
-    script(src='assets/js/moment/moment.js')
+    // dependencies
+    script(src='dist/assets/js/deps.js')
 
     each script in applicationScripts
       script(src=script)
 
     script(src='assets/templates/main.templates.js')
-

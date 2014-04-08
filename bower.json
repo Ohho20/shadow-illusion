@@ -21,7 +21,8 @@
     "font-awesome": "4.0.3",
     "lato": "0.1.0",
     "nprogress": "0.1.2",
-    "messenger": "1.3.5"
+    "messenger": "1.3.5",
+    "howlerjs": "https://github.com/goldfire/howler.js.git"
   },
   "devDependencies": {
     "jasmine": "1.3.1",
