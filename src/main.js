@@ -1,6 +1,5 @@
 angular.module('main', [
   'templates-main',
-  'templates-lib',
   'game.container',
   'game.screens',
   'game.entities'
