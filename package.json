@@ -18,7 +18,8 @@
     "nedb": "0.10.2",
     "connect-nedb-session": "0.0.2",
     "moment": "2.5.1",
-    "lodash": "2.4.1"
+    "lodash": "2.4.1",
+    "easystarjs": "0.1.6"
   },
   "devDependencies": {
     "grunt": "0.4.1",

@@ -8,8 +8,10 @@ module.exports = function (grunt) {
     // Shims
     'modernizr/modernizr.js',
 
-    // melon js
+    // Gaming Libs
     'melonJS/build/melonJS-1.0.0.js',
+    '../../../node_modules/easystarjs/bin/easystar-0.1.6.js', // <- blech
+    'howlerjs/howler.js',
 
     // jQuery and Related
     'jquery/jquery.js',
