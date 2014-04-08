@@ -16,8 +16,7 @@ angular.module('game.screens.title', [])
         );
 
         // renderable component with scrolling text
-        me.game.world.addChild( new (me.Renderable.extend({
-
+        var ScrollingText = me.Renderable.extend({
           init : {},
           scrollover: {},
           update: {}, 
@@ -28,7 +27,9 @@ angular.module('game.screens.title', [])
             // just in case
             this.scrollertween.stop();
           }
-        })), 2);
+        });
+
+        me.game.world.addChild( new ScrollingText(), 2);
       },
       
       
@@ -36,7 +37,7 @@ angular.module('game.screens.title', [])
        *  action to perform when leaving this screen (state change)
        */
       onDestroyEvent: function() {
-        ; // TODO
+        // TODO
       }
     });
   });

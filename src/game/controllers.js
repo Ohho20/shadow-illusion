@@ -1,6 +1,6 @@
-angular.module('app.controllers', [])
+angular.module('game.controllers', [])
 
-  .controller('MainCtrl', function ($scope, securityContext){
+  .controller('MainCtrl', function ($scope){
     
 
   })
@@ -8,14 +8,5 @@ angular.module('app.controllers', [])
   .controller('AppCtrl', 
     function ($scope){
       
-    }
-  )
-
-  .controller('NavCtrl', 
-    function ($scope, authentication) {
-    
-      $scope.logout = function logout () {
-        authentication.logout();
-      };
     }
   );

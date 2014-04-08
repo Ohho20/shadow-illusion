@@ -1,5 +1,5 @@
 angular.module('game.entities.coin', [])
-  .factory('Coin', function () {
+  .factory('Coin', function ($injector) {
 
     // Coin Entity
     return me.CollectableEntity.extend({
@@ -14,6 +14,7 @@ angular.module('game.entities.coin', [])
       onCollision : function () {
         me.audio.play('cling');
 
+        var game = $injector.get('game');
         game.data.score += 250;
 
         this.collidable = false;

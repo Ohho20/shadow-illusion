@@ -1,5 +1,7 @@
-angular.module('game.screens.play', [])
-	.factory('PlayScreen', function () {
+angular.module('game.screens.play', [
+		'game.entities.hud'
+	])
+	.factory('PlayScreen', function ($injector, HUD) {
 		
 		return me.ScreenObject.extend({
 			/**
@@ -13,13 +15,13 @@ angular.module('game.screens.play', [])
 				me.levelDirector.loadLevel('area01');
 
 				// reset the score
+				var game = $injector.get('game');
 				game.data.score = 0;
 
 				// add our HUD to the game world
-				this.HUD = new game.HUD.Container();
+				this.HUD = new HUD();
 				me.game.world.addChild(this.HUD);
 			},
-
 
 			/**
 			 *  action to perform when leaving this screen (state change)

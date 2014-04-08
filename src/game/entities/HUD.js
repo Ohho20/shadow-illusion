@@ -25,7 +25,7 @@ angular.module('game.entities.hud', [])
     });
   })
 
-  .factory('ScoreItem', function () {
+  .factory('ScoreItem', function ($injector) {
     /** 
      * a basic HUD item to display score
      */
@@ -56,6 +56,8 @@ angular.module('game.entities.hud', [])
       update : function () {
         // we don't do anything fancy here, so just
         // return true if the score has been updated
+        var game = $injector.get('game');
+
         if (this.score !== game.data.score) { 
           this.score = game.data.score;
           return true;
@@ -67,8 +69,9 @@ angular.module('game.entities.hud', [])
        * draw the score
        */
       draw : function (context) {
+        var game = $injector.get('game');
         this.font.draw(context, game.data.score, this.pos.x, this.pos.y);
       }
 
-    })
+    });
   });
