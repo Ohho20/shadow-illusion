@@ -1,6 +1,6 @@
 angular.module('game.entities.hud', [])
   
-  .factory('hudContainer', function () {
+  .factory('HUD', function (ScoreItem) {
     return me.ObjectContainer.extend({
 
       init: function() {
@@ -20,12 +20,12 @@ angular.module('game.entities.hud', [])
         this.name = "HUD";
         
         // add our child score object at the top left corner
-        this.addChild(new game.HUD.ScoreItem(630, 440));
+        this.addChild(new ScoreItem(630, 440));
       }
     });
   })
 
-  .factory('scoreItem', function () {
+  .factory('ScoreItem', function () {
     /** 
      * a basic HUD item to display score
      */

@@ -1,5 +1,5 @@
 angular.module('game.entities.enemy', [])
-  .factory('enemy', function () {
+  .factory('Enemy', function () {
 
     // Enemy Entity
     return me.ObjectEntity.extend({

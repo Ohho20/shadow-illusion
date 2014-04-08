@@ -1,5 +1,5 @@
 angular.module('game.screens.title', [])
-  .factory('titleScreen', function () {
+  .factory('TitleScreen', function () {
     
     return me.ScreenObject.extend({
       /** 

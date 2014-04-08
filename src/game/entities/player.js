@@ -1,5 +1,5 @@
 angular.module('game.entities.player', [])
-  .factory('player', function () {
+  .factory('Player', function () {
     
     // A player entity
     return me.ObjectEntity.extend({
