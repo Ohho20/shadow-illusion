@@ -8,9 +8,11 @@ module.exports = function (grunt) {
     // Shims
     'modernizr/modernizr.js',
 
+    // melon js
+    'melonJS/build/melonJS-1.0.0.js',
+
     // jQuery and Related
     'jquery/jquery.js',
-    'select2/select2.js',
     'messenger/build/js/messenger.js',
 
     // bootstrap
@@ -22,15 +24,6 @@ module.exports = function (grunt) {
     'angular-resource/angular-resource.js',
     'angular-sanitize/angular-sanitize.js',
     'angular-animate/angular-animate.js',
-
-    // Angular UI libraries
-    'angular-ui-router/release/angular-ui-router.js',
-    'angular-ui-utils/components/angular-ui-docs/build/ui-utils.js',
-    'angular-ui-select2/src/select2.js',
-    'angular-ui-bootstrap/src/position/position.js',
-    'angular-ui-bootstrap/src/datepicker/datepicker.js',
-    'angular-ui-bootstrap/src/pagination/pagination.js',
-    'angular-ui-bootstrap/src/buttons/buttons.js',
 
     //NProgress
     'nprogress/nprogress.js',
@@ -96,22 +89,9 @@ module.exports = function (grunt) {
           base: 'client',
         },
         src: [
-          '<%= assets %>/templates/app/**/*.html',
-          '<%= assets %>/templates/common/**/*.html',
-          '<%= assets %>/templates/home/**/*.html',
-          '<%= assets %>/templates/navigation/**/*.html',
           '<%= assets %>/templates/*.html'
         ],
         dest: '<%= clientdist %>/assets/templates/main.templates.js'
-      },
-      lib: {
-        options: {
-          base: '<%= assets %>/js/angular-ui-bootstrap',
-        },
-        src: [
-          '<%= assets %>/js/angular-ui-bootstrap/template/**/*.html'
-        ],
-        dest: '<%= clientdist %>/assets/templates/lib.templates.js'
       }
     },
 
@@ -126,14 +106,12 @@ module.exports = function (grunt) {
         src: [
           '<%= clientdist %>/assets/js/deps.js',
           '<%= clientdist %>/assets/templates/main.templates.js',
-          '<%= clientdist %>/assets/templates/lib.templates.js',
           'client/src/**/*.js'
         ],
         dest: '<%= clientdist %>/assets/js/app.js'
       },
       css: {
         src: [
-          '<%= components %>/select2/select2.css',
           '<%= components %>/nprogress/nprogress.css',
           '<%= components %>/messenger/build/css/messenger.css',
           '<%= components %>/messenger/build/css/messenger-spinner.css',
@@ -213,7 +191,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= assets %>',
-            src: ['img/**', 'font/**'],
+            src: ['img/**', 'font/**', 'bgm/**', 'map/**', 'sfx/**'],
             dest: '<%= clientdist %>/assets'
           },
           {
@@ -227,7 +205,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= clientdist %>/assets',
-            src: ['css/style.css', 'font/**', 'img/**', 'js/app.js'],
+            src: ['css/style.css', 'font/**', 'img/**', 'bgm/**', 'map/**', 'sfx/**', 'js/app.js'],
             dest: '<%= clientdist %>/<%= pkg.name %>-debug/assets'
           },
           {
@@ -241,7 +219,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= clientdist %>/assets',
-            src: ['css/style.min.css', 'font/**', 'img/**', 'js/app.min.js'],
+            src: ['css/style.min.css', 'font/**', 'img/**', 'bgm/**', 'map/**', 'sfx/**', 'js/app.min.js'],
             dest: '<%= clientdist %>/<%= pkg.name %>/assets'
           },
           {
@@ -261,8 +239,7 @@ module.exports = function (grunt) {
             env: 'development',
             applicationScripts : getScripts('client/src', 'src'),
             templateScripts: [
-              'assets/templates/main.templates.js',
-              'assets/templates/lib.templates.js'
+              'assets/templates/main.templates.js'
             ]
           }
         },
@@ -356,9 +333,6 @@ module.exports = function (grunt) {
       }
     },
 
-  // *********************************************************************************************
-  // New Tasks go below here !!!
-
     // Starts the karma runner for unit and e2e tests.
     // Tests are run when the task is re-invoked from the watch task.
     karma : {
@@ -389,6 +363,27 @@ module.exports = function (grunt) {
       app: {
         src: 'client/src/**/*.js',
         dest: '<%= clientdist %>/app.js'
+      }
+    },
+
+    shell: {
+      melonJS : {
+        options: {
+          stdout: true,
+          stderr: true,
+          execOptions: {
+            cwd: '<%= components %>/melonJS'
+          }
+        },
+        command: 'npm install'
+      },
+    },
+
+    // Runs dependency grunt builds
+    hub: {
+      melonJS: {
+        src: ['<%= components %>/melonJS/Gruntfile.js'],
+        tasks: ['concat', 'replace:dist']
       }
     }
 
@@ -445,6 +440,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-mixtape-run-app');
   grunt.loadNpmTasks('grunt-protractor-runner');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-hub');
 
   // **********************************************************************************************
 
@@ -454,7 +450,9 @@ module.exports = function (grunt) {
   // dist/debug/require.js, and then concatenate the require/define shim
   // almond.js and dist/debug/templates.js into the require.js file.
 
-  grunt.registerTask('default', ['clean', 'jshint', 'less', 'concat:css', 'html2js', 'concat:jsdeps', 'copy:vendor', 'copy:development']);
+  grunt.registerTask('default', [
+    'clean', 'shell', 'hub', 'jshint', 'less', 'concat:css', 'html2js', 'concat:jsdeps', 'copy:vendor', 'copy:development'
+  ]);
 
   // Task to compile everything in development mode
   grunt.registerTask('development', ['default']);

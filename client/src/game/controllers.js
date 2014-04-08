@@ -1,28 +1,12 @@
-angular.module('app.controllers', [])
+angular.module('game.controllers', [])
 
-  .controller('MainCtrl', function ($scope, securityContext){
+  .controller('MainCtrl', function ($scope){
     
-    $scope.$watch(function () {
-      return securityContext.authenticated;
-    },
-    function (authenticated) {
-      $scope.authenticated = authenticated;
-      $scope.loggedInUser = securityContext.user;
-    });
 
   })
   
   .controller('AppCtrl', 
     function ($scope){
       
-    }
-  )
-
-  .controller('NavCtrl', 
-    function ($scope, authentication) {
-    
-      $scope.logout = function logout () {
-        authentication.logout();
-      };
     }
   );
