@@ -10,7 +10,6 @@ module.exports = function (grunt) {
 
     // jQuery and Related
     'jquery/jquery.js',
-    'select2/select2.js',
     'messenger/build/js/messenger.js',
 
     // bootstrap
@@ -23,21 +22,15 @@ module.exports = function (grunt) {
     'angular-sanitize/angular-sanitize.js',
     'angular-animate/angular-animate.js',
 
-    // Angular UI libraries
-    'angular-ui-router/release/angular-ui-router.js',
-    'angular-ui-utils/components/angular-ui-docs/build/ui-utils.js',
-    'angular-ui-select2/src/select2.js',
-    'angular-ui-bootstrap/src/position/position.js',
-    'angular-ui-bootstrap/src/datepicker/datepicker.js',
-    'angular-ui-bootstrap/src/pagination/pagination.js',
-    'angular-ui-bootstrap/src/buttons/buttons.js',
-
     //NProgress
     'nprogress/nprogress.js',
 
     // utilities
     'lodash/dist/lodash.js',
-    'moment/moment.js'
+    'moment/moment.js',
+
+    // melon js
+    ''
   ],
 
   watchedFiles = [
