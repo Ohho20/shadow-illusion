@@ -1,8 +1,8 @@
 {
-  "name": "mixtape",
-  "title": "Mixtape",
+  "name": "mixtape-melon",
+  "title": "MixtapeMelon",
   "main": "./api/server.js",
-  "description": "Compilation of Cool frameworks and tools.",
+  "description": "Compilation of Angular and MelonJS.",
   "version": "0.0.1",
   "dependencies": {
     "express": "3.2.6",
@@ -47,7 +47,7 @@
     "grunt-html2js": "0.1.8",
     "grunt-ngmin": "0.0.3",
     "grunt-karma": "0.8.0",
-    "protractor": "0.19.0",
+    "protractor": "0.21.0",
     "grunt-protractor-runner": "0.2.3"
   }
 }

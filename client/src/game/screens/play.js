@@ -1,5 +1,5 @@
 angular.module('game.screens.play', [])
-	.factory('playScreen', function () {
+	.factory('PlayScreen', function () {
 		
 		return me.ScreenObject.extend({
 			/**

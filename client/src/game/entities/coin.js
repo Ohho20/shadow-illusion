@@ -1,5 +1,5 @@
 angular.module('game.entities.coin', [])
-  .factory('coin', function () {
+  .factory('Coin', function () {
 
     // Coin Entity
     return me.CollectableEntity.extend({
