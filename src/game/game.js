@@ -45,6 +45,9 @@ angular.module('game.container', [
 				me.state.set(me.state.MENU, new TitleScreen());
 				me.state.set(me.state.PLAY, new PlayScreen());
 
+				// set a global fading transition for the screen
+				me.state.transition("fade", "#FFFFFF", 250);
+
 				// add our player entity in the entity pool
 				me.pool.register("mainPlayer", Player);
 				me.pool.register("CoinEntity", Coin);
@@ -56,7 +59,7 @@ angular.module('game.container', [
 				me.input.bindKey(me.input.KEY.X, 'jump', true);
 
 				// Start the game.
-				me.state.change(me.state.PLAY);
+				me.state.change(me.state.MENU);
 			}
 		};
 	});

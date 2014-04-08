@@ -23,6 +23,7 @@ angular.module('game.container')
       {name: 'wheelie_right', type: 'image', src: sprite + 'wheelie_right.png'},
 
       {name: '32x32_font', type: 'image', src: font + '32x32_font.png'},
+      {name: "title_screen", type:"image", src: gui + 'title_screen.png'},
 
       /* Atlases 
        * @example
@@ -35,6 +36,7 @@ angular.module('game.container')
        * {name: "example01", type: "tmx", src: "data/map/example01.json"},
        */
       {name: 'area01', type: 'tmx', src: 'assets/map/area01.tmx'},
+      {name: 'area02', type: 'tmx', src: 'assets/map/area02.tmx'},
 
       /* Background music. 
        * @example
