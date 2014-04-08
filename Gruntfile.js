@@ -30,7 +30,7 @@ module.exports = function (grunt) {
     'moment/moment.js',
 
     // melon js
-    ''
+    'melonJS/build/melonJS-1.0.0.js'
   ],
 
   watchedFiles = [
@@ -349,9 +349,6 @@ module.exports = function (grunt) {
       }
     },
 
-  // *********************************************************************************************
-  // New Tasks go below here !!!
-
     // Starts the karma runner for unit and e2e tests.
     // Tests are run when the task is re-invoked from the watch task.
     karma : {
@@ -382,6 +379,27 @@ module.exports = function (grunt) {
       app: {
         src: 'client/src/**/*.js',
         dest: '<%= clientdist %>/app.js'
+      }
+    },
+
+    shell: {
+      melonJS : {
+        options: {
+          stdout: true,
+          stderr: true,
+          execOptions: {
+            cwd: '<%= components %>/melonJS'
+          }
+        },
+        command: 'npm install'
+      },
+    },
+
+    // Runs dependency grunt builds
+    hub: {
+      melonJS: {
+        src: ['<%= components %>/melonJS/Gruntfile.js'],
+        tasks: ['concat', 'replace:dist']
       }
     }
 
@@ -438,6 +456,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-mixtape-run-app');
   grunt.loadNpmTasks('grunt-protractor-runner');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-hub');
 
   // **********************************************************************************************
 
@@ -447,7 +466,9 @@ module.exports = function (grunt) {
   // dist/debug/require.js, and then concatenate the require/define shim
   // almond.js and dist/debug/templates.js into the require.js file.
 
-  grunt.registerTask('default', ['clean', 'jshint', 'less', 'concat:css', 'html2js', 'concat:jsdeps', 'copy:vendor', 'copy:development']);
+  grunt.registerTask('default', [
+    'clean', 'shell', 'hub', 'jshint', 'less', 'concat:css', 'html2js', 'concat:jsdeps', 'copy:vendor', 'copy:development'
+  ]);
 
   // Task to compile everything in development mode
   grunt.registerTask('development', ['default']);

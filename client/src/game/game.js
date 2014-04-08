@@ -1,6 +1,8 @@
 // Game namespace
-angular.module('game.container', [])
-	.factory('game', function (TitleScreen, PlayScreen, Player, Coin, Enemy) {
+angular.module('game.container', [
+	'game.controllers'
+])
+	.factory('game', function (TitleScreen, PlayScreen, Player, Coin, Enemy, resources) {
 
 		return {
 
@@ -32,7 +34,7 @@ angular.module('game.container', [])
 				me.loader.onload = this.loaded.bind(this);
 
 				// Load the resources.
-				me.loader.preload(game.resources);
+				me.loader.preload(resources);
 
 				// Initialize melonJS and display a loading screen.
 				me.state.change(me.state.LOADING);

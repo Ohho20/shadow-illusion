@@ -2,10 +2,8 @@ angular.module('main', [
   'templates-main',
   'templates-lib',
   'game.container',
-  'progress.interceptors',
-  'security.interceptors',
-  'ngAnimate',
-  'ui.router'
+  'game.screens',
+  'game.entities'
 ])
 
 .run(function ($log, $rootScope, game) {
