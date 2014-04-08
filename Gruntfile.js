@@ -8,6 +8,9 @@ module.exports = function (grunt) {
     // Shims
     'modernizr/modernizr.js',
 
+    // melon js
+    'melonJS/build/melonJS-1.0.0.js',
+
     // jQuery and Related
     'jquery/jquery.js',
     'messenger/build/js/messenger.js',
@@ -27,10 +30,7 @@ module.exports = function (grunt) {
 
     // utilities
     'lodash/dist/lodash.js',
-    'moment/moment.js',
-
-    // melon js
-    'melonJS/build/melonJS-1.0.0.js'
+    'moment/moment.js'
   ],
 
   watchedFiles = [
@@ -89,22 +89,9 @@ module.exports = function (grunt) {
           base: 'client',
         },
         src: [
-          '<%= assets %>/templates/app/**/*.html',
-          '<%= assets %>/templates/common/**/*.html',
-          '<%= assets %>/templates/home/**/*.html',
-          '<%= assets %>/templates/navigation/**/*.html',
           '<%= assets %>/templates/*.html'
         ],
         dest: '<%= clientdist %>/assets/templates/main.templates.js'
-      },
-      lib: {
-        options: {
-          base: '<%= assets %>/js/angular-ui-bootstrap',
-        },
-        src: [
-          '<%= assets %>/js/angular-ui-bootstrap/template/**/*.html'
-        ],
-        dest: '<%= clientdist %>/assets/templates/lib.templates.js'
       }
     },
 
@@ -119,14 +106,12 @@ module.exports = function (grunt) {
         src: [
           '<%= clientdist %>/assets/js/deps.js',
           '<%= clientdist %>/assets/templates/main.templates.js',
-          '<%= clientdist %>/assets/templates/lib.templates.js',
           'client/src/**/*.js'
         ],
         dest: '<%= clientdist %>/assets/js/app.js'
       },
       css: {
         src: [
-          '<%= components %>/select2/select2.css',
           '<%= components %>/nprogress/nprogress.css',
           '<%= components %>/messenger/build/css/messenger.css',
           '<%= components %>/messenger/build/css/messenger-spinner.css',
@@ -206,7 +191,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= assets %>',
-            src: ['img/**', 'font/**'],
+            src: ['img/**', 'font/**', 'bgm/**', 'map/**', 'sfx/**'],
             dest: '<%= clientdist %>/assets'
           },
           {
@@ -220,7 +205,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= clientdist %>/assets',
-            src: ['css/style.css', 'font/**', 'img/**', 'js/app.js'],
+            src: ['css/style.css', 'font/**', 'img/**', 'bgm/**', 'map/**', 'sfx/**', 'js/app.js'],
             dest: '<%= clientdist %>/<%= pkg.name %>-debug/assets'
           },
           {
@@ -234,7 +219,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= clientdist %>/assets',
-            src: ['css/style.min.css', 'font/**', 'img/**', 'js/app.min.js'],
+            src: ['css/style.min.css', 'font/**', 'img/**', 'bgm/**', 'map/**', 'sfx/**', 'js/app.min.js'],
             dest: '<%= clientdist %>/<%= pkg.name %>/assets'
           },
           {
@@ -254,8 +239,7 @@ module.exports = function (grunt) {
             env: 'development',
             applicationScripts : getScripts('client/src', 'src'),
             templateScripts: [
-              'assets/templates/main.templates.js',
-              'assets/templates/lib.templates.js'
+              'assets/templates/main.templates.js'
             ]
           }
         },
