@@ -1,6 +1,40 @@
 angular.module('data.resources', ['ngResource'])
-  .factory('data', function (api) {
+  .provider('data', {
 
+    page: function (resource, page, query) {
+      return [
+        'data',
+        function (data) {
+          return data.page(resource, page, query);
+        }
+      ];
+    },
+
+    list: function (resource, query) {
+      return [
+        'data',
+        function (data) {
+          return data.list(resource, query);
+        }
+      ];
+    },
+
+    get: function (resource, params) {
+      return [
+        'data',
+        '$stateParams',
+        function (data, $stateParams) {
+
+          // This function automatically queries on the id of the state
+          // If you need id to be something else, you can provide it via
+          // the params argument.
+          var query = angular.extend({id: $stateParams.id}, params);
+          return data.get(resource, query);
+        }
+      ];
+    },
+
+    $get: function () {
       var data = {
 
         page : function (resource, query) {        
@@ -55,7 +89,7 @@ angular.module('data.resources', ['ngResource'])
 
       return data;
     }
-  )
+  })
 
   .factory('api', function ($resource) {
 
