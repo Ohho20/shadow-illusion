@@ -1,7 +1,7 @@
 html(class="no-js", ng-app="main")
   head
     base(href="/")
-    title(ng-bind-template="Timesheetz") Timesheetz
+    title(ng-bind-template="Mixtape-Melon") Mixtape-Melon
 
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1")
@@ -13,6 +13,20 @@ html(class="no-js", ng-app="main")
       link(href="/assets/css/style.css", rel="stylesheet", type="text/css")
 
   body(ng-controller="MainCtrl")
-    #screen
+    .container
+      .row.text-centered
+        #screen
 
-    include ../templates/scripts
+    case env
+      when 'production'
+        script(src="assets/js/app.min.js")
+      when 'debug'
+        script(src="assets/js/app.js")
+      default
+        // dependencies
+        script(src='dist/assets/js/deps.js')
+
+        each script in applicationScripts
+          script(src=script)
+
+        script(src='assets/templates/main.templates.js')
