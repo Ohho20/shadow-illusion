@@ -2,7 +2,7 @@
 angular.module('game.container', [
 	'game.controllers'
 ])
-	.factory('game', function (TitleScreen, PlayScreen, Player, Coin, Enemy, resources) {
+	.factory('game', function ($location, TitleScreen, PlayScreen, Player, Coin, Enemy, resources) {
 
 		return {
 
@@ -21,10 +21,8 @@ angular.module('game.container', [
 				}
 
 				// add "#debug" to the URL to enable the debug Panel
-				if (document.location.hash === "#debug") {
-					window.onReady(function () {
-						me.plugin.register.defer(debugPanel, "debug");
-					});
+				if ($location.hash === "#debug") {
+					me.plugin.register.defer(debugPanel, "debug");
 				}
 
 				// Initialize the audio.
