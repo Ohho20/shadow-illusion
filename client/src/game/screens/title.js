@@ -1,5 +1,5 @@
 angular.module('game.screens.title', [])
-  .factory('TitleScreen', function () {
+  .factory('TitleScreen', function (ScrollingTitleText) {
     
     return me.ScreenObject.extend({
       /** 
@@ -16,44 +16,7 @@ angular.module('game.screens.title', [])
         );
 
         // renderable component with scrolling text
-        var ScrollingText = me.Renderable.extend({
-          init : function() {
-            this.parent(new me.Vector2d(0, 0), me.game.viewport.width, me.game.viewport.height);
-            // font for the scrolling text
-            this.font = new me.BitmapFont("32x32_font", 32);
-            
-             // a tween to animate the arrow
-            this.scrollertween = new me.Tween(this)
-              .to({scrollerpos: -2200 }, 10000)
-              .onComplete(this.scrollover.bind(this))
-              .start();
-    
-            this.scroller = "A SMALL STEP BY STEP TUTORIAL FOR GAME CREATION WITH MELONJS       ";
-            this.scrollerpos = 600;
-          },
-          
-          scrollover: function() {
-            // reset to default value
-            this.scrollerpos = 640;
-            this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
-          },
-        
-          update : function (dt) {
-            return true;
-          },
-          
-          draw : function (context) {
-            this.font.draw (context, "PRESS ENTER TO PLAY", 20, 240);
-            this.font.draw(context, this.scroller, this.scrollerpos, 440);
-          },
-
-          onDestroyEvent : function() {
-            //just in case
-            this.scrollertween.stop();
-          }
-        });
-
-        me.game.world.addChild( new ScrollingText(), 2);
+        me.game.world.addChild( new ScrollingTitleText(), 2);
 
         // change to play state on press Enter or click/tap
         me.input.bindKey(me.input.KEY.ENTER, "enter", true);
@@ -69,7 +32,6 @@ angular.module('game.screens.title', [])
         });
       },
       
-      
       /** 
        *  action to perform when leaving this screen (state change)
        */
@@ -77,6 +39,45 @@ angular.module('game.screens.title', [])
         me.input.unbindKey(me.input.KEY.ENTER);
         me.input.unbindPointer(me.input.mouse.LEFT);
         me.event.unsubscribe(this.handler);
+      }
+    });
+  })
+
+  .factory('ScrollingTitleText', function () {
+    return me.Renderable.extend({
+      init : function() {
+        this.parent(new me.Vector2d(0, 0), me.game.viewport.width, me.game.viewport.height);
+        // font for the scrolling text
+        this.font = new me.BitmapFont("32x32_font", 32);
+        
+         // a tween to animate the arrow
+        this.scrollertween = new me.Tween(this)
+          .to({scrollerpos: -2200 }, 10000)
+          .onComplete(this.scrollover.bind(this))
+          .start();
+
+        this.scroller = "A SMALL STEP BY STEP TUTORIAL FOR GAME CREATION WITH MELONJS       ";
+        this.scrollerpos = 600;
+      },
+      
+      scrollover: function() {
+        // reset to default value
+        this.scrollerpos = 640;
+        this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
+      },
+    
+      update : function (dt) {
+        return true;
+      },
+      
+      draw : function (context) {
+        this.font.draw (context, "PRESS ENTER TO PLAY", 20, 240);
+        this.font.draw(context, this.scroller, this.scrollerpos, 440);
+      },
+
+      onDestroyEvent : function() {
+        //just in case
+        this.scrollertween.stop();
       }
     });
   });
