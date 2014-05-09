@@ -5,8 +5,6 @@
 module.exports = function (grunt) {
 
   var componentList = [
-    // Shims
-    'modernizr/modernizr.js',
 
     // Gaming Libs
     'melonJS/build/melonJS-1.0.0.js',
@@ -15,20 +13,9 @@ module.exports = function (grunt) {
 
     // jQuery and Related
     'jquery/jquery.js',
-    'messenger/build/js/messenger.js',
-
-    // bootstrap
-    'bootstrap/dist/js/bootstrap.js',
 
     // AngularJS libraries
     'angular/angular.js',
-    'angular-cookies/angular-cookies.js',
-    'angular-resource/angular-resource.js',
-    'angular-sanitize/angular-sanitize.js',
-    'angular-animate/angular-animate.js',
-
-    //NProgress
-    'nprogress/nprogress.js',
 
     // utilities
     'lodash/dist/lodash.js',
@@ -114,9 +101,6 @@ module.exports = function (grunt) {
       },
       css: {
         src: [
-          '<%= components %>/nprogress/nprogress.css',
-          '<%= components %>/messenger/build/css/messenger.css',
-          '<%= components %>/messenger/build/css/messenger-spinner.css',
           '<%= clientdist %>/assets/css/style.css'
         ],
         dest: '<%= clientdist %>/assets/css/style.css'
@@ -344,22 +328,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Starts the protractor e2e tests.
-    protractor: {
-      options: {
-        configFile: 'protractor.config.js',
-        keepAlive: true,
-        noColor: false
-      },
-      e2e: {
-      },
-      debug: {
-        options: {
-          debug: true
-        }
-      }
-    },
-
     // Task to add the array-style angular injection to protect against uglifying.
     ngmin: {
       app: {
@@ -440,7 +408,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-ngmin');
   grunt.loadNpmTasks('grunt-mixtape-run-app');
-  grunt.loadNpmTasks('grunt-protractor-runner');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-hub');
 

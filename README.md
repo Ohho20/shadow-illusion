@@ -11,9 +11,6 @@ Track list:
 * [Jasmine](http://jasmine.github.io/)
 * [chai](http://chaijs.com/)
 * [sinon](http://sinonjs.org/)
-* [Bootstrap](http://twitter.github.io/bootstrap/)
-* [Redis](http://redis.io/)
-* [MongoDB](http://www.mongodb.org/)
 * [Less](http://lesscss.org/)
 * [Jade](http://jade-lang.com/)
 
