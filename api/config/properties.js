@@ -2,7 +2,7 @@
 /*jslint nomen: false*/
 module.exports = {
 
-  appName: "mixtape-api",
+  appName: "shadow-illusion",
 
   session : {
     secret : "d0853b30-3d95-11e2-a25f-0800200c9a66", // uuid hash
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   security : {
-    cookieSecret: 'mixtape-cookie-secret'
+    cookieSecret: 'illusion-secret'
   },
 
   server : {

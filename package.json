@@ -35,19 +35,8 @@
     "grunt-mixtape-run-app": "0.0.3",
     "grunt-shell": "0.6.4",
     "grunt-hub": "~0.6.2",
-    "jasmine-node": "1.11.0",
-    "grunt-docco-multi": "0.0.2",
     "walkdir": "0.0.7",
-    "chai": "1.8.1",
-    "chai-as-promised": "4.1.0",
-    "sinon": "1.7.3",
-    "sinon-chai": "2.4.0",
-    "karma": "0.12.0",
-    "karma-jasmine": "0.1.5",
-    "karma-ng-html2js-preprocessor": "0.1.0",
-    "karma-chrome-launcher": "0.1.2",
     "grunt-html2js": "0.1.8",
-    "grunt-ngmin": "0.0.3",
-    "grunt-karma": "0.8.0",
+    "grunt-ngmin": "0.0.3"
   }
 }
