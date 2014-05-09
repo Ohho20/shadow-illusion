@@ -319,23 +319,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Starts the karma runner for unit and e2e tests.
-    // Tests are run when the task is re-invoked from the watch task.
-    karma : {
-      unit : {
-        reporters: 'dots',
-        configFile: 'karma.config.js'
-      }
-    },
-
-    // Task to add the array-style angular injection to protect against uglifying.
-    ngmin: {
-      app: {
-        src: 'client/src/**/*.js',
-        dest: '<%= clientdist %>/app.js'
-      }
-    },
-
     shell: {
       melonJS : {
         options: {
@@ -403,7 +386,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-docco-multi');
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-ngmin');
