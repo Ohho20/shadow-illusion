@@ -82,14 +82,9 @@
   <image source="../img/Stone/groundr.png" width="64" height="64"/>
  </tileset>
  <imagelayer name="parallaxBack" width="100" height="50">
-  <image source="../img/bg/ws_mountains_peaks_2560x1600.jpg"/>
+  <image source="../img/bg/ws_mountains_peaks.jpg"/>
   <properties>
    <property name="ratio" value=".25"/>
-  </properties>
- </imagelayer>
- <imagelayer name="parallaxFront" width="100" height="50">
-  <properties>
-   <property name="ratio" value=".10"/>
   </properties>
  </imagelayer>
  <layer name="background" width="100" height="50">
