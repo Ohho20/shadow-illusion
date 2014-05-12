@@ -82,7 +82,7 @@
   <image source="../img/Stone/groundr.png" width="64" height="64"/>
  </tileset>
  <imagelayer name="parallaxBack" width="100" height="50">
-  <image source="../img/bg/cave.jpg"/>
+  <image source="../img/bg/water-cave.png"/>
   <properties>
    <property name="ratio" value=".25"/>
   </properties>
