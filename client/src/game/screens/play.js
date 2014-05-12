@@ -12,7 +12,7 @@ angular.module('game.screens.play', [
 				me.audio.playTrack('DST-InertExponent');
 
 				// load a level
-				me.levelDirector.loadLevel('level01');
+				me.levelDirector.loadLevel('level03');
 
 				// reset the score
 				var game = $injector.get('game');

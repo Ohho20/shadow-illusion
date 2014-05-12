@@ -6,7 +6,7 @@ angular.module('game.entities.enemy', [])
 
       init : function (x, y, settings) {
         // object settings
-        settings.image = 'wheelie_right';
+        settings.image = 'earth';
 
         var width = settings.width;
         var height = settings.height;
