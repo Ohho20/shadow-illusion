@@ -47,7 +47,12 @@ angular.module('game.entities.player', [])
 
             me.audio.play('jump');
           }
+        }
 
+        if (me.input.isKeyPressed('fire')) {
+          var fb = me.pool.pull('FireballEntity', this.pos.x, this.pos.y, {shootLeft: this.lastflipX});
+          me.game.world.addChild(fb, 999);
+          me.game.world.sort();
         }
 
         // check an dupdate player movement

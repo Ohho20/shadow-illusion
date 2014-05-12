@@ -2,7 +2,7 @@
 angular.module('game.container', [
 	'game.controllers'
 ])
-	.factory('game', function ($location, TitleScreen, PlayScreen, Player, Coin, Enemy, resources) {
+	.factory('game', function ($location, TitleScreen, PlayScreen, Player, Enemy, Fireball, resources) {
 
 		return {
 
@@ -48,8 +48,8 @@ angular.module('game.container', [
 
 				// add our player entity in the entity pool
 				me.pool.register("mainPlayer", Player);
-				me.pool.register("CoinEntity", Coin);
 				me.pool.register("EnemyEntity", Enemy);
+				me.pool.register('FireballEntity', Fireball);
 
 				// enable the keyboard
 				me.input.bindKey(me.input.KEY.LEFT, 'left');
