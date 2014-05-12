@@ -85,7 +85,7 @@
   <image source="../img/map/metatiles16x16.png" width="80" height="16"/>
  </tileset>
  <imagelayer name="parallaxBack" width="100" height="50">
-  <image source="../img/bg/ws_mountains_peaks.jpg"/>
+  <image source="../img/bg/mountains.png"/>
   <properties>
    <property name="ratio" value=".25"/>
   </properties>

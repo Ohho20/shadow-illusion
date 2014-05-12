@@ -35,8 +35,11 @@ angular.module('game.container')
        * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
        * {name: "example01", type: "tmx", src: "data/map/example01.json"},
        */
-      {name: 'area01', type: 'tmx', src: 'assets/map/area01.tmx'},
-      {name: 'area02', type: 'tmx', src: 'assets/map/area02.tmx'},
+      {name: 'level01', type: 'tmx', src: 'assets/map/level01.tmx'},
+      {name: 'level02', type: 'tmx', src: 'assets/map/level02.tmx'},
+      {name: 'level03', type: 'tmx', src: 'assets/map/level03.tmx'},
+      {name: 'level04', type: 'tmx', src: 'assets/map/level04.tmx'},
+      {name: 'level05', type: 'tmx', src: 'assets/map/level05.tmx'},
 
       /* Background music. 
        * @example
