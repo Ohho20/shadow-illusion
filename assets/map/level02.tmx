@@ -85,13 +85,13 @@
   <image source="../img/map/metatiles16x16.png" width="80" height="16"/>
  </tileset>
  <imagelayer name="parallaxBack" width="100" height="50">
-  <image source="../img/bg/Sky-Blue-Sky.jpg"/>
+  <image source="../img/bg/sky.png"/>
   <properties>
    <property name="ratio" value=".25"/>
   </properties>
  </imagelayer>
  <imagelayer name="parallaxFront" width="100" height="50">
-  <image source="../img/bg/Sky-Blue-Sky-FG.png"/>
+  <image source="../img/bg/sky-fg.png"/>
   <properties>
    <property name="ratio" value=".10"/>
   </properties>
