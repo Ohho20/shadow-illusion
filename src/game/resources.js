@@ -45,18 +45,18 @@ angular.module('game.container')
       {name: 'groundr', type: 'image', src: img + 'Ground/groundr.png'},
 
       // Stone
-      {name: 'stone0', type: 'image', src: img + 'Stone/ground0.png'},
-      {name: 'stone1', type: 'image', src: img + 'Stone/ground1.png'},
-      {name: 'stone2', type: 'image', src: img + 'Stone/ground2.png'},
-      {name: 'stone3', type: 'image', src: img + 'Stone/ground3.png'},
-      {name: 'stone4', type: 'image', src: img + 'Stone/ground4.png'},
-      {name: 'stone5', type: 'image', src: img + 'Stone/ground5.png'},
-      {name: 'stone6', type: 'image', src: img + 'Stone/ground6.png'},
-      {name: 'stone7', type: 'image', src: img + 'Stone/ground7.png'},
-      {name: 'stone8', type: 'image', src: img + 'Stone/ground8.png'},
-      {name: 'stone9', type: 'image', src: img + 'Stone/ground9.png'},
-      {name: 'stonel', type: 'image', src: img + 'Stone/groundl.png'},
-      {name: 'stoner', type: 'image', src: img + 'Stone/groundr.png'},
+      {name: 'stone0', type: 'image', src: img + 'Stone/stone0.png'},
+      {name: 'stone1', type: 'image', src: img + 'Stone/stone1.png'},
+      {name: 'stone2', type: 'image', src: img + 'Stone/stone2.png'},
+      {name: 'stone3', type: 'image', src: img + 'Stone/stone3.png'},
+      {name: 'stone4', type: 'image', src: img + 'Stone/stone4.png'},
+      {name: 'stone5', type: 'image', src: img + 'Stone/stone5.png'},
+      {name: 'stone6', type: 'image', src: img + 'Stone/stone6.png'},
+      {name: 'stone7', type: 'image', src: img + 'Stone/stone7.png'},
+      {name: 'stone8', type: 'image', src: img + 'Stone/stone8.png'},
+      {name: 'stone9', type: 'image', src: img + 'Stone/stone9.png'},
+      {name: 'stonel', type: 'image', src: img + 'Stone/stonel.png'},
+      {name: 'stoner', type: 'image', src: img + 'Stone/stoner.png'},
 
 
       // sprites

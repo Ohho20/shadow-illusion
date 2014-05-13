@@ -46,7 +46,7 @@
   <image source="../img/Ground/groundr.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1123" name="stone0" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground0.png" width="64" height="64"/>
+  <image source="../img/Stone/stone0.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1139" name="stone1" tilewidth="16" tileheight="16">
   <image source="../img/Stone/ground1.png" width="64" height="64"/>
