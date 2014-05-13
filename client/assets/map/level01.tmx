@@ -131,67 +131,67 @@
   </object>
  </objectgroup>
  <objectgroup name="Enemies" width="100" height="50">
-  <object name="EnemyEntity" x="258" y="364" width="185" height="31">
+  <object name="EnemyEntity" x="258" y="364" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="0" y="669" width="41" height="67">
+  <object name="EnemyEntity" x="0" y="669" width="41" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="583" y="700" width="185" height="31">
+  <object name="EnemyEntity" x="583" y="700" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="1055" y="703" width="185" height="31">
+  <object name="EnemyEntity" x="1055" y="703" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="336" y="593" width="185" height="31">
+  <object name="EnemyEntity" x="336" y="593" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="849" y="588" width="185" height="31">
+  <object name="EnemyEntity" x="849" y="588" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="1070" y="449" width="129" height="30">
+  <object name="EnemyEntity" x="1070" y="449" width="129" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="609" y="464" width="185" height="31">
+  <object name="EnemyEntity" x="609" y="464" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="1057" y="290" width="185" height="31">
+  <object name="EnemyEntity" x="1057" y="290" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="738" y="288" width="185" height="31">
+  <object name="EnemyEntity" x="738" y="288" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="417" y="225" width="185" height="31">
+  <object name="EnemyEntity" x="417" y="225" width="185" height="19">
    <properties>
     <property name="image" value="dark"/>
     <property name="spritewidth" value="16"/>
