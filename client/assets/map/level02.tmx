@@ -75,10 +75,10 @@
  <tileset firstgid="1267" name="stone9" tilewidth="16" tileheight="16">
   <image source="../img/Stone/stone9.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="1283" name="stonel" tilewidth="16" tileheight="16">
+ <tileset firstgid="1283" name="stone-left" tilewidth="16" tileheight="16">
   <image source="../img/Stone/stonel.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="1299" name="stoner" tilewidth="16" tileheight="16">
+ <tileset firstgid="1299" name="stone-right" tilewidth="16" tileheight="16">
   <image source="../img/Stone/stoner.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1315" name="metatiles16x16" tilewidth="16" tileheight="16">
