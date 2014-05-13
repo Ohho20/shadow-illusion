@@ -10,7 +10,7 @@ angular.module('game.screens.title', [])
         // title screen
         me.game.world.addChild(
           new me.SpriteObject(
-            0,0,me.loader.getImage('title_screen')
+            0,0,me.loader.getImage('water-cave')
           ),
           1
         );
@@ -71,7 +71,8 @@ angular.module('game.screens.title', [])
       },
       
       draw : function (context) {
-        this.font.draw (context, "PRESS ENTER TO PLAY", 20, 240);
+        this.font.draw(context, "SHADOW ILLUSION", 64, 64);
+        this.font.draw (context, "PRESS ENTER TO PLAY", 12, 240);
         this.font.draw(context, this.scroller, this.scrollerpos, 440);
       },
 
