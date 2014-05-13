@@ -116,7 +116,7 @@
   </data>
  </layer>
  <objectgroup name="Hero" width="100" height="50">
-  <object name="mainPlayer" x="17" y="383" width="16" height="32">
+  <object name="mainPlayer" x="14" y="330" width="16" height="32">
    <properties>
     <property name="image" value="paladin"/>
     <property name="spritewidth" value="16"/>
@@ -126,7 +126,7 @@
    <properties>
     <property name="duration" value="250"/>
     <property name="fade" value="#fff"/>
-    <property name="to" value="level02"/>
+    <property name="to" value="level04"/>
    </properties>
   </object>
  </objectgroup>
