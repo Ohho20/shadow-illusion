@@ -82,8 +82,28 @@
   <image source="../img/Stone/groundr.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1315" name="metatiles16x16" tilewidth="16" tileheight="16">
-  <image source="../img/map/metatiles16x16.png" width="80" height="16"/>
- </tileset>
+   <image source="../img/map/metatiles16x16.png" width="80" height="16"/>
+   <tile id="0">
+    <properties>
+     <property name="type" value="solid"/>
+    </properties>
+   </tile>
+   <tile id="1">
+    <properties>
+     <property name="type" value="platform"/>
+    </properties>
+   </tile>
+   <tile id="2">
+    <properties>
+     <property name="type" value="lslope"/>
+    </properties>
+   </tile>
+   <tile id="3">
+    <properties>
+     <property name="type" value="rslope"/>
+    </properties>
+   </tile>
+  </tileset>
  <imagelayer name="parallaxBack" width="100" height="50">
   <image source="../img/bg/sky.png"/>
   <properties>
@@ -102,27 +122,122 @@
   </data>
  </layer>
  <objectgroup name="Hero" width="100" height="50">
-  <object x="12" y="346" width="46" height="54"/>
+  <object name="mainPlayer" x="18" y="366" width="16" height="32">
+   <properties>
+    <property name="image" value="paladin"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Enemies" width="100" height="50">
-  <object x="9" y="92" width="79" height="35"/>
-  <object x="1304" y="457" width="50" height="53"/>
-  <object x="1414" y="429" width="81" height="33"/>
-  <object x="1163" y="463" width="72" height="31"/>
-  <object x="1145" y="635" width="82" height="35"/>
-  <object x="999" y="508" width="59" height="33"/>
-  <object x="905" y="601" width="77" height="34"/>
-  <object x="657" y="650" width="93" height="37"/>
-  <object x="673" y="294" width="95" height="42"/>
-  <object x="256" y="422" width="95" height="40"/>
-  <object x="913" y="56" width="95" height="41"/>
-  <object x="1249" y="14" width="96" height="33"/>
-  <object x="272" y="581" width="94" height="40"/>
-  <object x="544" y="490" width="94" height="37"/>
-  <object x="449" y="118" width="94" height="40"/>
-  <object x="322" y="217" width="95" height="37"/>
-  <object x="1137" y="295" width="96" height="40"/>
-  <object x="1139" y="134" width="90" height="41"/>
+  <object name="EnemyEntity" x="1138" y="635" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="893" y="603" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="653" y="648" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="272" y="586" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="1404" y="423" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="1305" y="467" width="48" height="43">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="978" y="505" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="1152" y="457" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="541" y="490" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="257" y="427" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="1136" y="298" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="672" y="296" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="1247" y="8" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="1137" y="137" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="911" y="58" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="445" y="121" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="0" y="91" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="322" y="216" width="95" height="37">
+   <properties>
+    <property name="image" value="dark"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="foreground" width="100" height="50">
   <data encoding="base64">
