@@ -49,37 +49,37 @@
   <image source="../img/Stone/ground0.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1139" name="stone1" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground1.png" width="64" height="64"/>
+  <image source="../img/Stone/stone1.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1155" name="stone2" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground2.png" width="64" height="64"/>
+  <image source="../img/Stone/stone2.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1171" name="stone3" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground3.png" width="64" height="64"/>
+  <image source="../img/Stone/stone3.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1187" name="stone4" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground4.png" width="64" height="64"/>
+  <image source="../img/Stone/stone4.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1203" name="stone5" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground5.png" width="64" height="64"/>
+  <image source="../img/Stone/stone5.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1219" name="stone6" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground6.png" width="64" height="64"/>
+  <image source="../img/Stone/stone6.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1235" name="stone7" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground7.png" width="64" height="64"/>
+  <image source="../img/Stone/stone7.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1251" name="stone8" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground8.png" width="64" height="64"/>
+  <image source="../img/Stone/stone8.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1267" name="stone9" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/ground9.png" width="64" height="64"/>
+  <image source="../img/Stone/stone9.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1283" name="stone-left" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/groundl.png" width="64" height="64"/>
+  <image source="../img/Stone/stonel.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1299" name="stone-right" tilewidth="16" tileheight="16">
-  <image source="../img/Stone/groundr.png" width="64" height="64"/>
+  <image source="../img/Stone/stoner.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="1315" name="metatiles16x16" tilewidth="16" tileheight="16">
   <image source="../img/map/metatiles16x16.png" width="80" height="16"/>
