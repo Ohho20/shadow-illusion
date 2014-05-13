@@ -2,7 +2,7 @@
 angular.module('game.container', [
 	'game.controllers'
 ])
-	.factory('game', function ($location, TitleScreen, PlayScreen, Player, Enemy, Fireball, resources) {
+	.factory('game', function ($location, TitleScreen, PlayScreen, DeathScreen, Player, Enemy, Fireball, resources) {
 
 		return {
 
@@ -42,6 +42,7 @@ angular.module('game.container', [
 			loaded: function () {
 				me.state.set(me.state.MENU, new TitleScreen());
 				me.state.set(me.state.PLAY, new PlayScreen());
+				me.state.set(me.state.DEATH, new DeathScreen());
 
 				// set a global fading transition for the screen
 				me.state.transition("fade", "#FFFFFF", 250);
@@ -56,6 +57,8 @@ angular.module('game.container', [
 				me.input.bindKey(me.input.KEY.RIGHT, 'right');
 				me.input.bindKey(me.input.KEY.X, 'jump', true);
 				me.input.bindKey(me.input.KEY.Z, 'fire', true);
+
+				me.input.bindKey(me.input.KEY.V, 'break', true);
 
 				// Start the game.
 				me.state.change(me.state.MENU);

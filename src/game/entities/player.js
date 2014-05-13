@@ -59,6 +59,11 @@ angular.module('game.entities.player', [])
         // check an dupdate player movement
         this.updateMovement();
 
+        // make sure we haven't fallen off the screen
+        if (this.pos.y > me.game.currentLevel.height) {
+          me.state.change(me.state.DEATH);
+        }
+
         // check for collision
         var res = me.game.world.collide(this);
 
