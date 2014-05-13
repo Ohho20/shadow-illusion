@@ -10,7 +10,7 @@ angular.module('game.entities.player', [])
         this.parent(x, y, settings);
 
         // set the default horizontal and vertical speed (accel vector)
-        this.setVelocity(3, 18);
+        this.setVelocity(3, 17);
         this.type = 'main-player';
 
         // set the display to follow our position on both axis. 
