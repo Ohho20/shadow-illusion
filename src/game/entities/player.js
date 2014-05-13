@@ -10,7 +10,7 @@ angular.module('game.entities.player', [])
         this.parent(x, y, settings);
 
         // set the default horizontal and vertical speed (accel vector)
-        this.setVelocity(3, 15);
+        this.setVelocity(3, 18);
         this.type = 'main-player';
 
         // set the display to follow our position on both axis. 
@@ -41,7 +41,7 @@ angular.module('game.entities.player', [])
           // make sure we are not already jumping or falling
           if (!this.jumping && !this.falling) {
             // set current vel to the maximum defined value
-            // gravity will then do teh rest
+            // gravity will then do the rest
             this.vel.y = -this.maxVel.y * me.timer.tick;
             // set the jumping flag
             this.jumping = true;

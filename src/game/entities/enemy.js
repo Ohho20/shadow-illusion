@@ -24,7 +24,7 @@ angular.module('game.entities.enemy', [])
         this.pos.x = x + width - settings.spritewidth;
 
         // walking and jumping speed
-        this.setVelocity(4, 6);
+        this.setVelocity(1, 6);
 
         // make it collidable
         this.collidable = true;
