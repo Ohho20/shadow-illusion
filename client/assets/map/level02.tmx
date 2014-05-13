@@ -122,10 +122,17 @@
   </data>
  </layer>
  <objectgroup name="Hero" width="100" height="50">
-  <object name="mainPlayer" x="18" y="366" width="16" height="32">
+  <object name="mainPlayer" x="45" y="361" width="16" height="16">
    <properties>
     <property name="image" value="paladin"/>
     <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="me.LevelEntity" x="1568" y="373" width="31" height="40">
+   <properties>
+    <property name="duration" value="250"/>
+    <property name="fade" value="#fff"/>
+    <property name="to" value="level05"/>
    </properties>
   </object>
  </objectgroup>
