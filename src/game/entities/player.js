@@ -11,6 +11,7 @@ angular.module('game.entities.player', [])
 
         // set the default horizontal and vertical speed (accel vector)
         this.setVelocity(3, 15);
+        this.type = 'main-player';
 
         // set the display to follow our position on both axis. 
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
