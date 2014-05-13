@@ -9,6 +9,7 @@ angular.module('game.container')
     var sprite = 'assets/img/sprite/';
     var bgm = 'assets/bgm/';
     var sfx = 'assets/sfx/';
+    var particles = 'assets/img/particles/';
     
     return  [
       /* Graphics. 
@@ -66,6 +67,14 @@ angular.module('game.container')
       {name: 'paladin', type: 'image', src: sprite + 'paladin.png'},
       {name: 'plant', type: 'image', src: sprite + 'plant.png'},
       {name: 'water', type: 'image', src: sprite + 'water.png'},
+
+      // particles
+      {name: 'blue', type: 'image', src: particles + 'blue.png'},
+      {name: 'explosion', type: 'image', src: particles + 'explosion.png'},
+      {name: 'fireball', type: 'image', src: particles + 'fireball.png'},
+      {name: 'rain', type: 'image', src: particles + 'rain.png'},
+      {name: 'smoke', type: 'image', src: particles + 'smoke.png'},
+
 
       // font and title
       {name: '32x32_font', type: 'image', src: font + '32x32_font.png'},
