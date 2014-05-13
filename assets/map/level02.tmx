@@ -128,6 +128,13 @@
     <property name="spritewidth" value="16"/>
    </properties>
   </object>
+  <object name="me.LevelEntity" x="1568" y="373" width="31" height="40">
+   <properties>
+    <property name="duration" value="250"/>
+    <property name="fade" value="#fff"/>
+    <property name="to" value="level05"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Enemies" width="100" height="50">
   <object name="EnemyEntity" x="1138" y="635" width="95" height="37">
