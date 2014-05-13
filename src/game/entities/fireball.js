@@ -20,8 +20,8 @@ angular.module('game.entities.fireball', [])
         this.endX = x + 300;
 
         // set the origin for firing
-        this.pos.x = this.shootLeft ? x - 56 : x + 24;
-        this.pos.y = y + 32;
+        this.pos.x = this.shootLeft ? x - 56 : x;
+        this.pos.y = y;
       },
 
       update: function (dt) {

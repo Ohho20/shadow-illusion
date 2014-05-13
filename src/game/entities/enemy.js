@@ -6,15 +6,13 @@ angular.module('game.entities.enemy', [])
 
       init : function (x, y, settings) {
         // object settings
-        settings.image = 'earth';
-
         var width = settings.width;
         var height = settings.height;
 
         // adjust the size setting info to match the sprite size
         // so that the entity is created with the correct size
-        settings.spritewidth = settings.width = 64;
-        settings.spriteheight = settings.height = 64;
+        settings.spritewidth = settings.width = 16;
+        settings.spriteheight = settings.height = 16;
 
         // invoke parent constructor
         this.parent(x, y, settings);
