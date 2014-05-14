@@ -5,10 +5,8 @@ client/test-reports/*
 client/docs/*
 client/assets/js/*
 client/cache.manifest
-client/dist/*
 .idea/*
 *.iml
-client/index.html
 libpeerconnection.log
 dist
 api/data/db/*
