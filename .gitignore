@@ -1,0 +1,11 @@
+
+.DS_Store
+node_modules/*
+client/test-reports/*
+client/docs/*
+client/assets/js/*
+client/cache.manifest
+.idea/*
+*.iml
+libpeerconnection.log
+api/data/db/*
