@@ -1,16 +1,19 @@
 html(class="no-js", ng-app="main")
   head
     base(href="/")
-    title(ng-bind-template="Mixtape-Melon") Mixtape-Melon
+    title() shadow-illusion
 
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1")
-    meta(name="description", content="Timesheet Demo Application")
+    meta(name="description", content="Shadow Illusion Game")
 
-    - if (env == 'production')
-      link(href="/assets/css/style.min.css", rel="stylesheet", type="text/css")
-    - else
-      link(href="/assets/css/style.css", rel="stylesheet", type="text/css")
+    case env
+      when 'production'
+        link(href="/assets/css/style.min.css", rel="stylesheet", type="text/css")
+      when 'gh'
+        link(href="/shadow-illusion/assets/css/style.css", rel="stylesheet", type="text/css")
+      default
+        link(href="/assets/css/style.css", rel="stylesheet", type="text/css")
 
   body(ng-controller="MainCtrl")
     .container
@@ -22,6 +25,15 @@ html(class="no-js", ng-app="main")
         script(src="assets/js/app.min.js")
       when 'debug'
         script(src="assets/js/app.js")
+      when 'gh'
+        // dependencies
+        script(src='/shadow-illusion/dist/assets/js/deps.js')
+
+        each script in applicationScripts
+          script(src='/shadow-illusion/' + script)
+
+        script(src='/shadow-illusion/assets/templates/main.templates.js')
+        
       default
         // dependencies
         script(src='dist/assets/js/deps.js')

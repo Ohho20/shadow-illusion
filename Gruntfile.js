@@ -233,6 +233,21 @@ module.exports = function (grunt) {
           'client/index.html': ['api/app/views/application/index.jade']
         }
       },
+      gh: {
+        options: {
+          pretty: true,
+          data: {
+            env: 'gh',
+            applicationScripts : getScripts('client/src', 'src'),
+            templateScripts: [
+              'assets/templates/main.templates.js'
+            ]
+          }
+        },
+        files: {
+          'client/index.html': ['api/app/views/application/index.jade']
+        }
+      },
       debug: {
         options: {
           pretty: true,
@@ -420,5 +435,5 @@ module.exports = function (grunt) {
   // Test results stored in client/test-reports
   grunt.registerTask('test', ['production', 'runapp:test']);
 
-  grunt.registerTask('publish', ['development', 'shell:publish']);
+  grunt.registerTask('publish', ['development', 'jade:gh', 'shell:publish']);
 };
