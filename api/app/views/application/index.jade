@@ -11,7 +11,7 @@ html(class="no-js", ng-app="main")
       when 'production'
         link(href="/assets/css/style.min.css", rel="stylesheet", type="text/css")
       when 'gh'
-        link(href="/shadow-illusion/assets/css/style.css", rel="stylesheet", type="text/css")
+        link(href="/shadow-illusion/dist/assets/css/style.css", rel="stylesheet", type="text/css")
       default
         link(href="/assets/css/style.css", rel="stylesheet", type="text/css")
 
@@ -40,5 +40,3 @@ html(class="no-js", ng-app="main")
 
         each script in applicationScripts
           script(src=script)
-
-        script(src='assets/templates/main.templates.js')
