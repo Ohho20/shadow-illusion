@@ -230,7 +230,7 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          '<%= assets %>/html/index.html': ['api/app/views/application/index.jade']
+          'client/index.html': ['api/app/views/application/index.jade']
         }
       },
       debug: {
@@ -330,6 +330,13 @@ module.exports = function (grunt) {
         },
         command: 'npm install'
       },
+      publish : {
+        options: {
+          stdout: true,
+          stderr: true
+        },
+        command: 'git subtree split --branch gh-pages --prefix client/'
+      }
     },
 
     // Runs dependency grunt builds
@@ -386,7 +393,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-docco-multi');
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-ngmin');
   grunt.loadNpmTasks('grunt-mixtape-run-app');
@@ -402,7 +408,7 @@ module.exports = function (grunt) {
   // almond.js and dist/debug/templates.js into the require.js file.
 
   grunt.registerTask('default', [
-    'clean', 'shell', 'hub', 'jshint', 'less', 'concat:css', 'html2js', 'concat:jsdeps', 'copy:vendor', 'copy:development'
+    'clean', 'shell:melonJS', 'hub', 'jshint', 'less', 'concat:css', 'html2js', 'concat:jsdeps', 'copy:vendor', 'copy:development', 'jade:development'
   ]);
 
   // Task to compile everything in development mode
@@ -413,4 +419,6 @@ module.exports = function (grunt) {
   // Forks off the application server and runs the unit and e2e tests.
   // Test results stored in client/test-reports
   grunt.registerTask('test', ['production', 'runapp:test']);
+
+  grunt.registerTask('publish', ['develoment', 'shell:publish']);
 };
