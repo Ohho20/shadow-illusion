@@ -1,15 +1,15 @@
 angular.module('game.container')
   .factory('resources', function () {
 
-    var img = 'assets/img/';
-    var bg = 'assets/img/bg/';
-    var font = 'assets/img/font/';
-    var gui = 'assets/img/gui/';
-    var map = 'assets/map/';
-    var sprite = 'assets/img/sprite/';
-    var bgm = 'assets/bgm/';
-    var sfx = 'assets/sfx/';
-    var particles = 'assets/img/particles/';
+    var img = 'shadow-illusion/assets/img/';
+    var bg = 'shadow-illusion/assets/img/bg/';
+    var font = 'shadow-illusion/assets/img/font/';
+    var gui = 'shadow-illusion/assets/img/gui/';
+    var map = 'shadow-illusion/assets/map/';
+    var sprite = 'shadow-illusion/assets/img/sprite/';
+    var bgm = 'shadow-illusion/assets/bgm/';
+    var sfx = 'shadow-illusion/assets/sfx/';
+    var particles = 'shadow-illusion/assets/img/particles/';
     
     return  [
       /* Graphics. 
