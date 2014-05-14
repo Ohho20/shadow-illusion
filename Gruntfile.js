@@ -420,5 +420,5 @@ module.exports = function (grunt) {
   // Test results stored in client/test-reports
   grunt.registerTask('test', ['production', 'runapp:test']);
 
-  grunt.registerTask('publish', ['develoment', 'shell:publish']);
+  grunt.registerTask('publish', ['development', 'shell:publish']);
 };
